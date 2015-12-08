@@ -57,8 +57,9 @@ module.exports = React.createClass( {
 				<div className="exporter__option-fieldset-fields">
 					{ this.props.menus.map( ( menu, menuIndex ) => (
 						<Select key={ menuIndex } disabled={ !this.props.isEnabled }>
-							{ menu.options.map( ( option, optionIndex ) => (
-								<option value={ optionIndex } key={ optionIndex }>{ option }</option>
+							<option value={ null } key={ -1 }>{ menu.defaultLabel }</option>
+							{ menu.options.map( ( option ) => (
+								<option value={ option.key } key={ option.key }>{ option.label }</option>
 							) ) }
 						</Select>
 					) ) }

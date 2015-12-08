@@ -51,6 +51,7 @@ export default React.createClass( {
 						shouldShowProgress={ this.props.shouldShowProgress }
 						onToggleFieldset={ this.props.toggleSection }
 						onClickExport={ this.props.startExport }
+						options={ this.props.options }
 					/>
 				</FoldableCard>
 			</div>
